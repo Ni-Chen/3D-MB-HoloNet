@@ -19,12 +19,19 @@ This repository contains:
 ### Requirements
 
  - Python 3.6.5 
-
  - Tensorflow 1.15 
-
  - Keras 2.2.5 
 
-   
+
+
+
+## How to use the code
+
+- If you have your own data, put it in `./code/data/`, then run `./code/keras/train.py` after setting your parameters
+- If you don't have a code, `./code/matlab/HoloData_sim.m` can generate training data.
+- You can also down a sample data here: https://drive.google.com/file/d/10i2N8HV9x5AOxZZ5OVOke0LgYENZKZ1E/view?usp=sharing, put it in  `./code/data/`, and then run the `./code/keras/train.py`
+
+
 
 -------------------------------------
 
