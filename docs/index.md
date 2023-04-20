@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: project
 title: "Model-based Deep 3D holographic imaging"
 ---
 
@@ -9,7 +9,7 @@ title: "Model-based Deep 3D holographic imaging"
 <nav class="text-center" style="width: 100%">
   <a href="https://ni-chen.github.io/" class="author">Ni Chen,</a>
   <a href="http://congliwang.github.io/" class="author">Congli Wang,</a>
-  <a href="http://vccimaging.org/People/heidriw/" class="author"> Wolfgang Heidrich </a>
+  <a  class="author"> Wolfgang Heidrich </a>
 </nav>
 <nav>
  KAUST 

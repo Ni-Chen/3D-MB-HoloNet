@@ -1,133 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
   <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Model-based Deep 3D holographic imaging</title>
-  <meta name="description"
-    content="">
-  <link rel="stylesheet" href="http://localhost:4000/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/">
-  <link rel="shortcut icon" type="image/x-icon" href="http://localhost:4000/images/favicon.ico">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=888c8fea032a149d506f3ff02bf7f6dfe58c3c0d">
 
-  <!-- Load KaTex jQuery -->
-  <!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
-  <!-- Load KaTeX -->
-  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css"> -->
-  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script> -->
-
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-        inlineMath: [['$','$']]
-      }
-    });
-  </script>
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
-  </script>
-
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56515654-4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-56515654-4');
-  </script>
-
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?0662740a0d2368cc5cfaa508dd843362";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-  
-   <!-- Baidu Analytics -->
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?0662740a0d2368cc5cfaa508dd843362";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-56515654-4"></script>
 <script>
-  function ShowOrHide(select='inpress') {
-      // var elem = document.getElementById("btn");
-      var x = document.getElementById('inpress');
-      var y = document.getElementById('byyear');
-      var z = document.getElementById('bytype');
-      var w = document.getElementById('bytalk');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-
-      var x_btn = document.getElementById("btn_inpress");
-      var y_btn = document.getElementById("btn_byyear");
-      var z_btn = document.getElementById("btn_bytype");
-      var w_btn = document.getElementById("btn_bytalk");
-
-
-      // document.getElementById(select).display='block';
-      // document.getElementById("btn_"+select).disabled=true;
-
-      if (select == 'inpress') {          
-          x.style.display = 'block';
-          x_btn.disabled = true; 
-          y.style.display = 'none';
-          y_btn.disabled = false;   
-          z.style.display = 'none';
-          z_btn.disabled = false;   
-          w.style.display = 'none';
-          w_btn.disabled = false;   
-          // elem.innerHTML = typetxt;
-      } else if (select == 'byyear'){          
-          x.style.display = 'none';
-          x_btn.disabled = false;  
-          y.style.display = 'block';
-          // y_btn.closest('li').addClass('active');   
-          y_btn.disabled = true;
-          z.style.display = 'none';
-          z_btn.disabled = false;  
-          w.style.display = 'none';
-          w_btn.disabled = false;   
-          // elem.innerHTML = yeartxt;
-      } else if (select == 'bytype'){          
-          x.style.display = 'none';
-          x_btn.disabled = false;  
-          y.style.display = 'none';
-          y_btn.disabled = false;  
-          z.style.display = 'block';
-          z_btn.disabled = true;
-          // z_btn.parents('li').addClass('active').siblings().removeClass('active'); 
-          w.style.display = 'none';
-          w_btn.disabled = false;   
-      }
-      else if (select == 'bytalk'){          
-          x.style.display = 'none';
-          x_btn.disabled = false;  
-          y.style.display = 'none';
-          y_btn.disabled = false;  
-          z.style.display = 'none';
-          z_btn.disabled = false;
-          w.style.display = 'block';
-          w_btn.disabled = true;   
-      }
-  }
+  gtag('config', 'UA-56515654-4');
 </script>
 
+ <!-- Baidu Analytics -->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?0662740a0d2368cc5cfaa508dd843362";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
 
-  
+<!-- Setup Google Analytics -->
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-  <script>
+  ga('create', 'UA-56515654-4', 'auto');
+  ga('send', 'pageview');
+</script>
+<script>
   var _hmt = _hmt || [];
   (function() {
     var hm = document.createElement("script");
@@ -138,58 +57,29 @@
 </script>
 
 
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
 
+<!-- end custom head snippets -->
+  </head>
 
-
-</head>
-
-
-  <body text-align="justify">
-    
-
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-				data-target="#navbar-collapse-1" aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-
-			<a class="navbar-brand" href="https://ni-chen.github.io/">Ni Chen, Ph.D.</a>
-		</div>
-		<div class="collapse navbar-collapse" id="navbar-collapse-1">
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="https://ni-chen.github.io/">About</a></li>
-				<!-- <li><a href="http://localhost:4000/people">People</a></li> -->
-				<!-- <li><a href="http://localhost:4000/vacancies">Vacancies</a></li> -->
-				<li><a href="https://ni-chen.github.io/publications">Publications</a></li>
-				<li><a href="https://ni-chen.github.io/research">Research</a></li>
-				<li><a href="https://ni-chen.github.io/funding">Funding</a></li>
-				<li><a href="https://ni-chen.github.io/resource">Resource</a></li>
-				<!-- <li><a href="http://localhost:4000/posts">Post</a></li> -->
-			</ul>
-		</div>
-	</div>
-</div>
-
-    <div class="container-fluid">
-      <div class="row">
+  <body>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h2 class="section-title"> Model-based Deep 3D holographic imaging  </h2>
 <h5 class="pubname"> IEEE Transaction on Computational Imaging, 2021 </h5>
 <nav class="text-center" style="width: 100%">
-  <p><a href="https://ni-chen.github.io/" class="author">Ni Chen,</a>
+  <a href="https://ni-chen.github.io/" class="author">Ni Chen,</a>
   <a href="http://congliwang.github.io/" class="author">Congli Wang,</a>
-  <a href="http://vccimaging.org/People/heidriw/" class="author"> Wolfgang Heidrich </a></p>
+  <a class="author"> Wolfgang Heidrich </a>
 </nav>
 <nav>
-  <p>KAUST</p>
+ KAUST 
 </nav>
 
 <section class="container">
-  <abstract>
+<abstract>
 <h5 class="section-title">  Abstract  </h5>
 Gabor holography is a simple and effective approach for 3D imaging. However, it suffers from a DC term, twin-image entanglement, and defocus noise. The conventional approach for solving this problem is either using an off-axis setup, or compressive holography. The former sacrifices simplicity, and the latter is computationally demanding and time consuming. To cope with this problem, we propose a model-based holographic network (MB-HoloNet) for 3D particle imaging. The free-space point spread function, which is essential for hologram reconstruction, is used as a prior in the MB-HoloNet. All parameters are learned end-to-end. The physical prior makes the network efficient and stable for both localization and 3D particle size reconstructions.
 <br /><br />
@@ -198,20 +88,20 @@ Gabor holography is a simple and effective approach for 3D imaging. However, it 
 
 <!-- Framework -->
 <section class="container">
-  <h5 class="section-title"> Framework </h5>
-  <figure>
-    <p><img src="img/teaser.svg" alt="framework" style="width: 90%" /></p>
-    <figcaption>
-      <p>Fig. 1: Schematic diagram of the MB-HoloNet.</p>
-    </figcaption>
-  </figure>
+<h5 class="section-title"> Framework </h5>
+<figure>
+<img src="img/teaser.svg" alt="framework" style="width: 90%" />
+<figcaption>
+Fig. 1: Schematic diagram of the MB-HoloNet.
+</figcaption>
+</figure>
 </section>
 
 <!-- Results -->
 <section class="container">
-  <h5 class="section-title"> Some results  </h5>
-  <figure>
-    <p><img src="img/exp3_holo1.png" alt="framework" style="height: 200px" />
+<h5 class="section-title"> Some results  </h5>
+<figure>
+  <img src="img/exp3_holo1.png" alt="framework" style="height: 200px" />
   <img src="img/exp3_holo2.png" alt="framework" style="height: 200px" />
   <img src="img/exp3_holo3.png" alt="framework" style="height: 200px" />\
   <img src="img/exp3_holo4.png" alt="framework" style="height: 200px" />
@@ -219,28 +109,28 @@ Gabor holography is a simple and effective approach for 3D imaging. However, it 
   <img src="img/Visualization1.gif" alt="framework" style="height: 200px" />
   <img src="img/Visualization2.gif" alt="framework" style="height: 200px" />
   <img src="img/Visualization3.gif" alt="framework" style="height: 200px" />
-  <img src="img/Visualization4.gif" alt="framework" style="height: 200px" /></p>
+  <img src="img/Visualization4.gif" alt="framework" style="height: 200px" />
 
-    <figcaption>
-      <p>Fig. 2: Sample holograms and the corresponding reconstructions.</p>
-    </figcaption>
-  </figure>
+  <figcaption>
+  Fig. 2: Sample holograms and the corresponding reconstructions.
+  </figcaption>
+</figure>
 </section>
 
 <!-- Data -->
 
 <!-- Downloads -->
 <section class="container">
-  <h5 class="section-title">  Downloads </h5>
-  <div class="row" style="padding-left: 36px">
-    <p>The manuscript link <a href="https://ieeexplore.ieee.org/abstract/document/9369862/"> <img src="img/pdf_64x64.png" alt="pdf manuscript" class="smallimg" /></a> | Github project link <a href="https://github.com/Ni-Chen/3D-MB-HoloNet"><img src="img/github_64x64.png" alt="dataset" class="smallimg" />
-</a></p>
-  </div>
+<h5 class="section-title">  Downloads </h5>
+<div class="row" style="padding-left: 36px">
+The manuscript link <a href="https://ieeexplore.ieee.org/abstract/document/9369862/"> <img src="img/pdf_64x64.png" alt="pdf manuscript" class="smallimg" /></a> | Github project link <a href="https://github.com/Ni-Chen/3D-MB-HoloNet"><img src="img/github_64x64.png" alt="dataset" class="smallimg" />
+</a>
+</div>
 </section>
 
 <section class="container">
-  <h5 class="section-title"> Bibtex </h5>
-  <pre>
+<h5 class="section-title"> Bibtex </h5>
+<pre>
 @article{Chen2020TCI,
 title      = {Holographic {3D} particle imaging with model-based network},
 author     = {Ni Chen and Congli Wang and Wolfgang Heidrich*},
@@ -256,40 +146,46 @@ url        = {http://hdl.handle.net/10754/666339},
 </section>
 
 
-
-        <script type="text/javascript">
-          // revert publication list number
-          var olists = document.getElementsByTagName('ol');
-          for (var i = 0; i < olists.length; i++) { 
-            // if (!olists[i].className.match(/\breversed\b/)) 
-            //   continue; 
-            var items = olists[i].getElementsByTagName('li'); 
-            for(var j = 0; j < items.length; j++) {
-               items[j].setAttribute("value", items.length - j); 
-            } 
-          }
-
-      </script>
-      </div>
+      </section>
     </div>
 
-    
-<footer class="sticky-bottom mt-5">
-  <div class="container" style="text-align:center;">
-    &copy; Copyright 2021, Ni Chen
-    <br>
-    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> and <a href="https://github.com/inukshuk/jekyll-scholar" target="_blank">Jekyll Scholar</a>
+    <!-- FOOTER  -->
+    <footer class="inner">
+  <!-- For checkbox setting -->
+  <script type="text/javascript">
+    var inputs = document.getElementsByTagName('input');    
+    for (var i=0; i<inputs.length; i++) {
+      if (inputs[i].type == 'checkbox') {
+        if (inputs[i].checked == false){
+          inputs[i].disabled = false;
+        }    
+      }
+    }
+  </script>
+  
+  <!-- Foot note -->
+  
+  <p class="copyright">3D-MB-HoloNet maintained by <a href="https://ni-chen.github.io">Ni Chen</a> | Last updated: April 20, 2023 </p>
+  
 
-    
-    <!-- | Last updated: July 11, 2021 -->
-    | Last updated: July, 2021
-    
-  </div>
 </footer>
-
-
+ 
 
 
   </body>
-
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true
+        },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+});</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } } }); </script>
+   <!--Need to be after the contents-->
 </html>
