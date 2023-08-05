@@ -37,5 +37,5 @@ This repository contains:
 
 ## Contact
 
-Ni Chen, nichen@zrizona.edu
+Ni Chen, nichen@arizona.edu
 
