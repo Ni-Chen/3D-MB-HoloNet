@@ -37,5 +37,5 @@ This repository contains:
 
 ## Contact
 
-Ni Chen, ni.chen@kaust.edu.sa
+Ni Chen, nichen@zrizona.edu
 
