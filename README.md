@@ -1,5 +1,7 @@
 # Model-based Deep 3D holographic imaging
 
+[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+
 This is the open source repository for our paper of: ["Holographic 3D particle imaging with model-based deep network"](https://ieeexplore.ieee.org/document/9369862), [Ni Chen](https://ni-chen.github.io/), [Congli Wang](https://congliwang.github.io/), and [Wolfgang Heidrich](https://vccimaging.org/People/heidriw/), [IEEE Transactions on Computational Imaging](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6745852) 7: 288-296, 2021.
 
 
