@@ -39,5 +39,5 @@ This repository contains:
 
 ## Contact
 
-Ni Chen, nichen@arizona.edu
+Ni Chen, nichen.optics@gmail.com
 
