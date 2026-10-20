@@ -73,6 +73,8 @@ def main():
     train_data, val_data, train_labels, val_labels = train_test_split(
         data, labels, test_size=0.2, random_state=42
     )
+    data_max = np.max(train_data)
+    data_min = np.min(train_data)
     train_data, data_mean, data_std = norm_data(train_data)
     val_data = norm_data_mu(val_data, data_mean, data_std)
     scipy.io.savemat(
@@ -80,8 +82,8 @@ def main():
         {
             "data_mean": data_mean,
             "data_std": data_std,
-            "data_max": np.max(train_data),
-            "data_min": np.min(train_data),
+            "data_max": data_max,
+            "data_min": data_min,
         },
     )
 
