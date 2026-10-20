@@ -101,7 +101,7 @@ def main():
     model = MOHoloNet(
         args.Nxy, args.Nxy, args.Nz, args.layer_num, args.gamma, args.reg
     ).to(device)
-    optimizer = torch.optim.Adam(model.parameters(), lr=args.lr_max)
+    optimizer = torch.optim.Adam(model.parameters(), lr=args.lr_max, eps=1e-7)
     start_epoch = args.start_epoch
     best_loss = float("inf")
     if start_epoch:

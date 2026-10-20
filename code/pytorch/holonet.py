@@ -34,9 +34,9 @@ class ResidualBlock(nn.Module):
     def __init__(self, channels, reg_param):
         super().__init__()
         self.conv1 = nn.Conv2d(channels, channels, 3, padding=1, bias=False)
-        self.bn1 = nn.BatchNorm2d(channels)
+        self.bn1 = nn.BatchNorm2d(channels, eps=1e-3, momentum=0.01)
         self.conv2 = nn.Conv2d(channels, channels, 3, padding=1, bias=False)
-        self.bn2 = nn.BatchNorm2d(channels)
+        self.bn2 = nn.BatchNorm2d(channels, eps=1e-3, momentum=0.01)
         self.reg_param = reg_param
         nn.init.xavier_normal_(self.conv1.weight)
         nn.init.xavier_normal_(self.conv2.weight)
@@ -116,7 +116,7 @@ class MOHoloNet(nn.Module):
         self.phases = nn.ModuleList(
             Phase(img_depths, reg_param) for _ in range(layer_num)
         )
-        self.output_bn = nn.BatchNorm2d(img_depths)
+        self.output_bn = nn.BatchNorm2d(img_depths, eps=1e-3, momentum=0.01)
 
     def forward(self, hologram, otf, return_aux=False):
         if hologram.ndim != 3:
