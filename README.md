@@ -12,6 +12,7 @@ This is the open source repository for our paper of: ["Holographic 3D particle i
 This repository contains:
 
 - Keras implementation of the MB-HoloNet
+- PyTorch implementation of the MB-HoloNet
 - MATLAB implementation of inline hologram synthesize
 
 
@@ -24,6 +25,11 @@ This repository contains:
  - Tensorflow 1.15 
  - Keras 2.2.5 
 
+The PyTorch implementation is in `./code/pytorch/` and requires PyTorch 2.6.0,
+NumPy, SciPy, h5py, scikit-learn, and Matplotlib. Install a PyTorch build that
+matches your CPU or CUDA environment using the instructions at
+https://pytorch.org/get-started/locally/.
+
 
 
 
@@ -32,6 +38,7 @@ This repository contains:
 - If you have your own data, put it in `./code/data/`, then run `./code/keras/train.py` after setting your parameters
 - If you don't have a code, `./code/matlab/HoloData_sim.m` can generate training data.
 - You can also down a sample data here: https://drive.google.com/file/d/10i2N8HV9x5AOxZZ5OVOke0LgYENZKZ1E/view?usp=sharing, put it in  `./code/data/`, and then run the `./code/keras/train.py`
+- To train with PyTorch instead, run `python ./code/pytorch/train.py` with the desired model and dataset options. Evaluate the best checkpoint with `python ./code/pytorch/test.py`; both scripts accept `--data_path` and `--model_dir` overrides.
 
 
 
@@ -40,4 +47,3 @@ This repository contains:
 ## Contact
 
 Ni Chen, nichen.optics@gmail.com
-
